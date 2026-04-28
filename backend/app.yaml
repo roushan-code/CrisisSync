@@ -1,0 +1,12 @@
+runtime: nodejs20
+env: standard
+entrypoint: "node index.js"
+
+env_variables:
+  NODE_ENV: "production"
+  GOOGLE_GEMINI_KEY: "your-api-key"
+
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
